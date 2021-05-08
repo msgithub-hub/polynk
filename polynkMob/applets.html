@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>挤出工程师认证</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/applets.css">
+</head>
+<body>
+<div class="toubuHead" id="toubuHead"></div>
+<div class="content_body">
+    <div class="content1">
+        <p class="textCont animated slideInRight yc textShadow">全球挤出工程师认证系统：由<a href="http://www.jwellcz.com/" style="color: #F6523A">金纬机械</a>冠名，是一个提供挤出行业工程师信息服务的综合平台，平台集认证、考核、维修申请、专家问答、技术资料分享、配件提供、积分兑换为一体， 提供了丰富的生态系统体验，上线以来好评无数，为挤出行业的工程师们提供了极大的便利。</p>
+        <img src="image/loading.gif" lay-src="image/jcz.jpg" class="textImg animated slideInLeft yc boxShadow">
+        <p class="textCont animated slideInRight yc textShadow"><a href="http://www.jwellcz.com/" style="color: #F6523A">金纬机械</a>冠名的挤出工程师认证系统，旨在通过本平台帮助全球挤出行业杰出工程师对自身能力进行评估和认证，并根据个人需求提供学习机会和培养计划，促进挤出行业的进步与发展。核心团队成员行业经验10年+，专业的团队，丰富的行业经验。</p>
+        <img src="image/loading.gif" lay-src="image/Extruder3.jpg" class="textImg animated slideInLeft yc boxShadow">
+        <p class="textCont animated slideInRight yc textShadow">全球挤出工程师认证系统，旨在通过平台帮助全球挤出行业杰出工程师对自身能力进行评估和认证，系统划分为7大模块，分别为工程师认证、考核评级、共享资料、维修申请、专家问答、积分兑换及配件商城。平台提供免费的学习资料和专家问答。专家等级分为金、银、铜3个等级，通过相应的考核后公司为其评级、颁发等级证书。评级人员均为从事该行业多年，经验丰富的技术人才，可以在线解答用户疑问。</p>
+        <img src="image/loading.gif" lay-src="image/Extruder4.jpg" class="textImg animated slideInLeft yc boxShadow">
+        <p class="textCont animated slideInRight yc textShadow">此外我公司还提供了丰富的生态圈，涵盖挤出机配件、产品解决方案、行业配套和熔喷配件等，以供有需要的客户咨询购买。有需要的客户在维修申请中发布维修任务，通过平台认证的工程师可以根据自身能力在维修申请中自主接单，前往客户厂家进行维修工作。</p>
+        <img src="image/loading.gif" lay-src="image/Extruder.jpg" class="textImg animated slideInLeft yc boxShadow">
+        <img src="image/loading.gif" lay-src="image/Extruder5.jpg" class="textImg animated slideInRight yc boxShadow">
+    </div>
+    <div class="content2">
+        <img src="image/jc1.png" class="textImg animated slideInRight yc">
+        <img src="image/jc2.png" class="textImg animated slideInLeft yc ">
+        <img src="image/jc3.png" class="textImg animated slideInRight yc ">
+        <img src="image/jc4.png" class="textImg animated slideInLeft yc ">
+    </div>
+</div>
+<div class="foot wenzi_bottom" id="wenzi_bottom"></div>
+<script src="js/rem.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/loadHF.js"></script>
+<script>
+    layui.use([ 'layer', 'jquery','flow'], () => {
+        let $=layui.jquery;
+        let layer=layui.layer;
+        let flow = layui.flow;
+        flow.lazyimg();
+        // 图片预览
+        $('.content1').on('click', '.textImg', function () {
+            layer.photos({
+                photos: '.content1',
+                anim:4 //0-6的选择，指定弹出图片动画类型，默认随机
+            });
+        });
+    })
+</script>
+</body>
+</html>

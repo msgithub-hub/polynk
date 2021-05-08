@@ -1,0 +1,125 @@
+.mapDate{
+    width: 1000px;
+    margin: 0 auto;
+    /*padding-bottom: 20px;*/
+    /*background: yellow;*/
+    display: flex;
+}
+
+#map-container {
+    width: 755px;
+    height: 500px;
+    border: 1px solid black;
+    /*margin: 0 auto;*/
+    /*background: #ff386b;*/
+}
+.date{
+    width: 290px;
+    /*height: 500px;*/
+    margin-left: 10px;
+}
+#test2 #layui-laydate1{
+    box-shadow: 6px 6px 6px 6px #666666;
+}
+.layui-laydate-header{
+    background: #F6523A;
+    color: white;
+}
+#test2 .layui-laydate .layui-this {
+    background-color: #F37361 !important;
+}
+#test2 .layui-laydate-header {
+    background: #F37361 !important;
+    color: whitesmoke;
+    text-shadow: 6px 6px 6px  black !important;
+}
+#test2 .layui-laydate-header i{
+    color: white;
+}
+.layui-laydate-content table thead tr {
+    text-shadow: 6px 6px 6px  black !important;
+}
+
+.contactMan{
+    width: 100%;
+
+    /*background: yellow;*/
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4vh;
+}
+.contactMan p{
+    width: 100%;
+    height: 1.5rem;
+    text-align: left;
+    line-height: 1.5rem;
+    font-size: 0.7rem;
+    color: white;
+    /*text-shadow: 6px 6px 6px  black;*/
+    /*margin-top: 5px;*/
+}
+.contactMan p i{
+    font-size: 0.7rem;
+}
+
+
+/*媒体查询*/
+@media (max-width: 900px) {
+   .content1{
+        width: 80%;
+    }
+    .mapDate{
+        width: 100%;
+        /*padding-bottom: 20px;*/
+        /*background: yellow;*/
+        display: flex;
+        flex-wrap:wrap;
+    }
+    #map-container {
+        width: 100%;
+        height: 25rem;
+        /*background: #ff386b;*/
+    }
+    .date{
+        width:100%;
+        /*height: 500px;*/
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    #test2 #layui-laydate1{
+        width: 100%;
+    }
+
+    #test2 .layui-laydate-main {
+        width: 100%;
+    }
+
+    .layui-laydate-content table {
+        width: 100%;
+    }
+    .contactMan{
+        width: 100%;
+        padding-bottom: 22vh;
+    }
+    .contactMan p{
+        font-size: 1rem;
+        text-align: left;
+        color: black;
+    }
+    .contactMan p a{
+        color: #F6523A !important;
+    }
+    .contactMan p i{
+        font-size: 1rem;
+    }
+    .wenzi_bottom{
+        position: fixed;bottom:0;z-index: 100;
+    }
+    .laydate-set-ym span{
+        font-size: 1rem;
+    }
+    #test2 .layui-laydate-content td,
+    #test2 .layui-laydate-content th{height: 2rem;}
+}

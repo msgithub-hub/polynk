@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+</head>
+<body>
+<div class="toubuHead" id="toubuHead"></div>
+<div class="content_body">
+    <div class="content1">
+        <div class="mapDate">
+            <div class="map animated slideInLeft yc boxShadow" id="map-container"></div>
+            <div class="date animated slideInRight yc" id="test2"></div>
+        </div>
+        <div class="contactMan animated slideInLeft  yc">
+            <p class="">
+                <i class="layui-icon layui-icon-username">联系人:</i>
+                郭风芸
+            </p>
+            <p class="">
+                <i class="layui-icon layui-icon-cellphone">手机:</i>
+                <a href="tel:18851200191" style="color: white" class="huxi">18851200191</a>
+            </p>
+            <p class="">
+                <i class="layui-icon layui-icon-dialogue">邮箱:</i>
+                <a href="javascript:void(0)" style="color: white" class="huxi">gfy@polynk.com</a>
+            </p>
+            <p class="pLong ">
+                <i class="layui-icon layui-icon-location">地址:</i>
+                江苏省常州市溧阳市昆仑街道上上路85号504室
+            </p>
+        </div>
+    </div>
+</div>
+<div class="foot wenzi_bottom" id="wenzi_bottom"></div>
+<script src="js/rem.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/loadHF.js"></script>
+<script type="text/javascript" src="http://map.qq.com/api/js?key=DXGBZ-EHOWG-GUSQ3-IK74G-S52QT-Y2FGG"></script>
+<script>
+    layui.use(['layer', 'jquery','laydate'], () => {
+        let layer = layui.layer;
+        let laydate = layui.laydate;
+        let $=layui.jquery;
+        // layer.ready(function() {
+        //     loadIndex = layer.load(1,{
+        //         time:2 * 1000,
+        //         shade: [1,'#ddd']
+        //     });
+        // });
+        var citylocation, map, marker = null;
+
+        //给外层的a标签加上url，方便一会点击小地图的时候直接跳转。
+        function newMapGo(id, lat, lng) {
+            var markUrl = 'https://apis.map.qq.com/tools/poimarker' +
+                '?marker=coord:' + lat + ',' + lng +
+                '&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77&referer=myapp';
+            //给位置展示组件赋值
+            // document.getElementById(id).href = markUrl;
+        }
+
+        //需要外层元素id和对应地址的经纬度
+        function newMap(id, lat, lng) {
+            var center = new qq.maps.LatLng(lat, lng);
+            var map = new qq.maps.Map(document.getElementById(id), {
+                center: center,
+                zoom: 18
+            });
+            //调用城市服务信息
+            citylocation = new qq.maps.CityService({
+                complete: function (results) {
+                    map.setCenter(results.detail.latLng);
+                    if (marker != null) {
+                        // marker.setMap(null);
+                    }
+                    //设置marker标记
+                    marker = new qq.maps.Marker({
+                        map: map,
+                        position: results.detail.latLng
+                    });
+                }
+            });
+            citylocation.searchCityByLatLng(center);
+            newMapGo('aToMap', lat, lng);
+        }
+
+        //给id,经纬度
+        newMap('map-container', 31.45355,119.434827);
+        laydate.render({
+            elem: '#test2',
+            position: 'static',
+            // lang: 'en',
+            theme: 'grid',//日历显示格子样式
+            calendar: true,//提示当月有哪些国际节日，英文版的没有
+            // showBottom: false, //是否关闭底部按钮
+            btns: ['now'],
+            // mark: {
+            //     '0-4-1': '愚人节',
+            //     '0-4-22': '啥都不是'
+            //     ,'0-12-13': '国殇'
+            //     ,'0-0-25': '工资'
+            //     ,
+            // },
+            change: function(value, date,){
+                layer.msg(`${date.month}月${date.date}号`);
+            },
+
+            ready: (date) => { //监听日期被切换
+                layer.msg(`${date.month}月${date.date}号`);
+            }
+
+        })
+    });
+</script>
+</body>
+</html>

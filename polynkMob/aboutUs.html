@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+    <!--设置IE渲染方式默认为最高( 让它永远按最新的文档模型渲染）-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/aboutUs.css">
+</head>
+<body>
+<div class="toubuHead" id="toubuHead"></div>
+<div class="content_body">
+    <div class="content1">
+        <p class="textTitle animated slideInLeft yc textShadow" >织梦者</p>
+        <p class="textWord animated slideInRight yc textShadow">塑连网络科技江苏有限公司，坐落于江苏省溧阳市中关村科技产业园内，是园区内第一家真正意义上的互联网公司，同时也是溧阳第一家由传统行业涉足新媒体的公司。</p>
+        <img src="image/loading.gif" lay-src="image/huanan.png" class="textImg animated slideInLeft yc boxShadow">
+        <p class="textWord animated slideInRight yc textShadow">公司成立于2019年，注册资本1000万元。主营互联网信息技术服务，先后打造了基于微信平台的微信小程序——全球挤出工程师认证系统和面向海外买家的机械设备与原料信息服务B2B2C平台——<a href="https://www.polynk.com/index.php" style="color: orangered">polynk.com</a></p>
+        <img src="image/loading.gif" lay-src="image/kingfa.png" class="textImg animated slideInLeft yc boxShadow">
+        <p class="textWord animated slideInRight yc textShadow">polynk.com:是一家致力于打造面向全球橡塑行业买家的专业化垂直领域信息平台。旨在为全球橡塑行业的商家提供公平、开放、真实、便捷的网上营商环境。核心团队由国内橡塑行业10年以上工作经验的人员构成。了解行业，了解海外买家的需求。全球参展，跟踪国际热点。每年参加国外橡塑展会、行业会议遍布欧洲、南美、北美、中东、东南亚等多个国家和地区，客户加入源源不断。预期长期稳定客户超10万家。平台入驻完全免费，提供了功能完善的商家后台系统以及智能客服系统。目前平台已经邀请超过200家国内知名机械、原料生产厂家入驻。</p>
+        <img src="image/loading.gif" lay-src="image/visit.png" class="textImg animated slideInLeft yc boxShadow">
+        <p class="textWord animated slideInRight yc textShadow">塑连科技欢迎您的加入！</p>
+        <img src="image/loading.gif" lay-src="image/aac.jpg" class="textImg animated slideInLeft yc boxShadow">
+    </div>
+    <div class="yycontent">
+        <p class="textTitle animated slideInRight yc textShadow" >妍云家</p>
+        <p class="textWord animated slideInLeft yc textShadow">妍云家是塑连网络科技江苏有限公司旗下的一个自己创办的电商部门，我们有专业的团队进行严格选品工作以及运营工作，对所选产品的品质进行严格筛选把控。以优选、优质、优价为目标，提供优质的服务，提升最佳的购物体验感！</p>
+        <p class="textWord animated slideInRight yc textShadow">产品还在持续更新中，如果您有优质的货源提供，或者您想成为我们优秀的体验反馈师，欢迎与我们联系哦！</p>
+        <img src="image/loading.gif" lay-src="image/yanyun/yyImg.jpg" class="textImg animated slideInLeft yc boxShadow textImg1">
+        <p class="textTitle animated slideInRight yc textTitle1" ><i class="layui-icon layui-icon-face-smile" style="padding-right: 5px"></i>可以扫描下方相关二维码，关注我们，期待与您相遇！</p>
+        <div class="yyma animated slideInLeft yc">
+            <div class="yymaSon">
+                <img src="image/loading.gif" lay-src="image/yanyun/yyma1.jpg" class="yma yyma1 boxShadow">
+                <p class="yymaname textShadow">妍云家生活馆(微信公众号)</p>
+            </div>
+            <div class="yymaSon">
+                <img src="image/loading.gif" lay-src="image/yanyun/yyma2.jpg" class="yma yyma2 boxShadow">
+                <p class="yymaname textShadow">妍云居家日用生活馆(拼多多店铺)</p>
+            </div>
+            <div class="yymaSon">
+                <img src="image/loading.gif" lay-src="image/yanyun/yyma3.jpg" class="yma yyma3 boxShadow">
+                <p class="yymaname textShadow">妍云家抖音账号</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot wenzi_bottom" id="wenzi_bottom"></div>
+<script src="js/rem.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/loadHF.js"></script>
+<script>
+    layui.use([ 'layer', 'jquery','flow'], () => {
+        let $=layui.jquery;
+        let layer=layui.layer;
+        let flow = layui.flow;
+        flow.lazyimg();
+        // 图片预览
+        $('.content1').on('click', '.textImg', function () {
+            // console.log(1111);
+            layer.photos({
+                photos: '.content1',
+                anim: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+            });
+        });
+
+        // 图片预览
+        $('.yyma').on('click', '.yymaSon .yma', function () {
+            // console.log(1111);
+            layer.photos({
+                photos: '.yyma',
+                anim: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+            });
+        });
+    })
+</script>
+</body>
+</html>

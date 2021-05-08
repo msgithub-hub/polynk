@@ -1,0 +1,43 @@
+
+.textCont{
+    width: 100%;
+    text-align: justify;
+    color: white;
+    line-height: 29px;
+    letter-spacing: 2px;
+    font-size: 0.6rem;
+    margin-top: 10px;
+}
+.textImg{
+    width: 60%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20%;
+}
+.content2{
+    width: 1000px;
+    padding-bottom: 20px;
+    /*background: yellow;*/
+    margin: 0 auto;
+}
+
+/*媒体查询*/
+@media (max-width: 900px) {
+    .content1{
+        width: 90%;
+    }
+    .textImg{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        margin-left: 0%;
+    }
+    .content2{
+        width: 90%;
+        padding-bottom: 40px;
+    }
+    .textCont{
+        font-size: 0.8rem;
+    }
+
+}

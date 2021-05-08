@@ -1,0 +1,104 @@
+.toubuHead .toubu .content-nav .navUl .li_none {
+    margin-left: 1.5%;
+    width: 155px;
+    height: 40px;
+    color: wheat;
+    line-height: 40px;
+    text-align: center;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    background: rgba(250,250,250,0.0);
+}
+.toubuHead .toubu .content-nav .navUl .li_son1:nth-last-child(2) {
+    width:155px;
+    margin-left: 0%;
+    color: white !important;
+    /*border-bottom: 3px solid white;*/
+    background: rgba(255,255,255,0.5);
+}
+
+.detailtitle{
+    width: 1000px;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    text-align: center;
+    color: black;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    /*padding-bottom: 20px;*/
+}
+.detailTime{
+    width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid #F6523A;
+    padding-bottom: 8px;
+    text-align: center;
+    color: black;
+    font-size: 0.3rem;
+    /*letter-spacing: 1px;*/
+}
+.detailText{
+    /*text-indent:2em;*/
+    width: 1000px;
+    margin: 8px auto;
+    line-height: 2rem;
+    text-align: justify;
+    -moz-text-align-last: right;
+    color: white;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+.detailImg{
+    width: 1000px;
+    height: auto;
+    margin: 20px auto;
+}
+
+
+@media (max-width: 900px) {
+    .toubuHead .toubu .content-nav .navUl .li_none {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin-left: 0%;
+        font-size: 1rem;
+        color: white !important;
+        font-weight: 600;
+    }
+    .toubuHead .toubu .content-nav .navUl .li_son1:nth-last-child(2){
+        width:100%;
+        color: #F6523A !important;
+    }
+    .content1{
+        width: 90%;
+        padding-bottom: 20vh;
+    }
+    .detailtitle{
+        width: 100%;
+        font-size: 1rem;
+        color: darkred;
+        font-weight: 600;
+    }
+    .detailTime{
+        width: 100%;
+        color: white;
+        font-size: 0.7rem;
+    }
+    .detailText{
+        /*text-indent:2em;*/
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    .detailImg{
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+    .wenzi_bottom{
+        position: fixed;bottom:0;z-index: 100;
+    }
+}

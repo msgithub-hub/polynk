@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生态圈详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/ecosphereDetails.css">
+</head>
+<body>
+
+<div class="toubuHead" id="toubuHead"></div>
+<div class="content_body">
+
+</div>
+<div class="foot wenzi_bottom" id="wenzi_bottom"></div>
+
+<script src="js/rem.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/loadHF.js"></script>
+<script>
+    let loadIndex;
+    layui.use([ 'layer', 'jquery','flow'], () => {
+        let $=layui.jquery;
+        let layer=layui.layer;
+        let flow = layui.flow;
+        flow.lazyimg();
+
+        // 获取点击的id
+        function getQueryVariable(variable) {
+            let query = window.location.search.substring(1);
+            let vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return (false);
+        }
+        let idAll = getQueryVariable('id');
+        console.log(idAll);
+        function movementAjax() {
+            layer.ready(function() {
+                loadIndex = layer.load(1,{
+                    // time:2 * 1000,
+                    shade: [1,'#ddd']
+                });
+            });
+            $.ajax({
+                type: 'get',
+                url: 'json/list.json',
+                dataType: 'json',
+                data: {
+                    // "id":  idAll,
+                },
+                success: function (res) {
+                    layer.close(loadIndex);
+                    let dataList = res.arr1;
+                    // console.log(dataList);
+                    $.each(dataList, function (idx, val) {
+                        if (idAll == val.id) {
+                            if(val.pic==''){
+                                $('.content_body').append(`<div class="content1">
+                                           <div class="detailtitle animated slideInLeft  textShadow">${val.textTitleCN}</div>
+                                           <p class="detailTime animated slideInRight  textShadow">${val.time}</p>
+                                           <p class="detailText animated slideInLeft  textShadow">${val.textJS}</p>
+
+                                      </div>`)
+                            }else{
+                                let el = `<div class="content1">
+                                           <div class="detailtitle animated slideInLeft  textShadow">${val.textTitleCN}</div>
+                                           <p class="detailTime animated slideInRight  textShadow">${val.time}</p>
+                                           <p class="detailText animated slideInLeft  textShadow">${val.textJS}</p>
+                                           <div class="photo_rongqi"><img src="image/loading.gif" lay-src="${val.pic}" class="detailImg animated slideInRight boxShadow"></div>
+                                      </div>`;
+                                $('.content_body').append(el)
+                            }
+
+                        }
+                    });
+
+                    // 图片预览
+                    $('.detailImg').on('click',function () {
+                        console.log('2222photo');
+                        layer.photos({
+                            photos: '.photo_rongqi',
+                            anim: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+                        });
+
+                    });
+                },
+                error: function (xhr, type) {
+                    layui.use('layer', function () {
+                        layer.msg('稍后再试');
+                    })
+                }
+            });
+        }
+        $(function () {
+            movementAjax();
+
+        })
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>塑连科技</title>
+    <!--设置IE渲染方式默认为最高( 让它永远按最新的文档模型渲染）-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <style>
+        .layui-carousel-ind .layui-this {
+            background: #F6523A !important;
+        }
+    </style>
+</head>
+<body>
+<div class="toubuHead" id="toubuHead"></div>
+
+<div class="content_body">
+    <!--轮播图-->
+    <div class="content1 layui-carousel animated slideInLeft yc" id="test1">
+        <div carousel-item>
+            <div><img src="image/ban1.png" class="ban"></div>
+            <div><img src="image/Extruder1.jpg" class="ban"  onclick="javascript:window.open('applets.html#2','_self')"></div>
+            <div><img src="image/ban2.png" class="ban"></div>
+            <div><img src="image/Extruder2.jpg" class="ban"  onclick="javascript:window.open('applets.html#2','_self')"></div>
+            <div><img src="image/5.jpg" class="ban"></div>
+        </div>
+    </div>
+
+    <!--我们的理念-->
+    <img src="image/title1.png" class="title1 animated slideInRight yc huxi">
+    <div class="content2 thinkContent animated slideInLeft yc">
+        <img src="image/moveImg1.png" class="moveImg1">
+        <img src="image/moveImg2.png" class="moveImg2">
+    </div>
+
+    <!--我们的团队-->
+    <div class="content4">
+        <img src="image/title3.png" class="title1 animated slideInRight yc huxi">
+        <p class="teamWord animated slideInLeft yc textShadow">我们的团队每年参加国外橡塑展会、行业会议遍布欧洲、南美、北美、中东、东南亚等多个国家和地区，客户加入源源不断。预期长期稳定客户10万家。</p>
+        <img src="image/loading.gif" lay-src="image/aab.jpg" class="teamImg animated slideInLeft yc boxShadow" title="绿色可循环之旅">
+        <img src="image/loading.gif" lay-src="image/aac.jpg" class="teamImg animated slideInRight yc boxShadow" title="绿色可循环之旅">
+        <p class="teamWord animated slideInRight yc textShadow">2021年，公司启动绿色可循环之旅，走访国内多家企业，从上游原料到下游制品，足迹遍布橡塑行业各个环节。通过走访，我们对这些企业的生产情况、市场布局以及未来发展有了一定的了解，对整个橡塑行业现状以及未来方向做了大致研判。</p>
+        <img src="image/loading.gif" lay-src="image/abc.jpg" class="teamImg animated slideInLeft yc boxShadow" title="绿色可循环之旅">
+        <img src="image/loading.gif" lay-src="image/cf1.jpg" class="teamImg animated slideInRight yc boxShadow" title="绿色可循环之旅">
+        <p class="teamWord animated slideInLeft yc textShadow">“绿色可循环”是目前行业内的主旋律，是要求也是责任，将此作为本次活动的主题，是我们作为橡塑人主动担起责任的决心，是对未来建成清新环保高质量的橡塑圈的信心。</p>
+        <img src="image/loading.gif" lay-src="image/cf2.jpg" class="teamImg animated slideInRight yc boxShadow" title="绿色可循环之旅">
+        <p class="teamWord animated slideInLeft yc textShadow">同时入驻我们的<a style="color: #F6523A" href="https://www.polynk.com/index.php">polynk.com电商</a><span class="teamWordSpan" style="color: yellow;font-size: 0.6rem">(为不影响您的体验过程，请在电脑端打开这个链接，移动端暂未适配)</span>可选择上传商家准确联系方式及网址，即信息展示模式；或委托我方代理店铺，无需额外付出人力、精力，即店铺托管模式；亦可商家自行管理店铺，自主联系意向客户，即店铺自营模式。</p>
+
+    </div>
+
+
+
+    <!--我们的合作伙伴-->
+    <img src="image/title2.png" class="title1 animated slideInRight yc huxi">
+    <p class="attention animated slideInLeft yc"><i class="layui-icon layui-icon-face-smile"
+                                                    style="padding-right: 5px"></i>排名不分前后</p>
+    <div class="content3 animated slideInRight yc"></div>
+
+    <p class="attention animated slideInLeft yc" id="attentionVideo">塑连科技宣传视频<i class="layui-icon layui-icon-video" style="padding-left: 5px"></i></p>
+</div>
+
+<div class="foot wenzi_bottom" id="wenzi_bottom"></div>
+
+
+<script src="js/rem.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/loadHF.js"></script>
+<script>
+    let loadIndex;
+    layui.use(['element', 'layer', 'jquery', 'carousel','flow'], () => {
+        let element = layui.element;
+        let $ = layui.jquery;
+        let carousel = layui.carousel;
+        let layer = layui.layer;
+        let flow = layui.flow;
+        flow.lazyimg();
+        // layer.ready(function() {
+        //     loadIndex = layer.load(1,{
+        //         time:1.5 * 1000,
+        //         shade: [0.6,'#ddd']
+        //     });
+        // });
+        carousel.render({
+            elem: '#test1'
+            , width: '100%' //设置容器宽度
+            , height: '18rem'
+            , arrow: 'hover' //始终显示箭头
+            , interval: '2000' //切换动画方式
+            , anim: 'default'
+        });
+
+        function photoJson() {
+            $.getJSON('json/photo.json', function (res) {
+                let dataLen = res.photo.pic;
+                // const imgArr = dataLen.split(',');
+                for (let x = 0; x < dataLen.length; x++) {
+                    const imgL = `<img src="image/loading.gif" lay-src="${dataLen[x]}" class="friendlogo boxShadow">`;
+                    if (dataLen[x]) {
+                        $('.content3').append(imgL);
+                    }
+                }
+            })
+        }
+
+        $(function () {
+            // 宣传视频播放
+            let loadstr = `<video width="100%" height="100%"  controls="controls" autobuffer="autobuffer"  autoplay="autoplay" loop="loop" style="background:black;">
+                                  <source src="image/video.mp4" type="video/mp4"></source>
+                           </video>`;
+            function videoPlay(){
+                layer.open({
+                    type: 1,
+                    title: false,
+                    shade: [1, '#000'],
+                    area: ['94vw', '96vh'],
+                    content: loadstr,
+                });
+            }
+
+            // let video = document.getElementById('bgmusic');
+            // function videoPlay() {
+            //     video.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
+            //     video.play(); // iOS 7/8 仅需要 play 一下
+            // }
+            //
+            // video.addEventListener('timeupdate', function () {
+            //     //监听到视频播放结束后
+            //     if(video.currentTime>video.duration - 0){
+            //         video.pause();
+            //     }
+            //     // $('.videoRQ').hide();
+            //     // forceSafariPlayAudio() //循环播放大视频
+            // }, false);
+            //
+            //
+            // $('.videoRQ').on('click', '.videoClose', function () {
+            //     video.pause();
+            //     $('.videoRQ').hide();
+            // })
+            videoPlay();
+            photoJson();
+            //点击宣传视频播放
+            $('#attentionVideo').on('click', function () {
+                videoPlay()
+            });
+
+            // 图片预览
+            $('.content3').on('click', '.friendlogo', function () {
+                layer.photos({
+                    photos: '.content3',
+                    anim: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+                });
+            });
+
+            // 图片预览
+            $('.content4').on('click', '.teamImg', function () {
+                layer.photos({
+                    photos: '.content4',
+                    anim: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+                });
+            });
+
+        })
+
+    })
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+
+<style>
+    /*脚部*/
+    .foot {
+        /*position: fixed;*/
+        /*bottom: 0px;*/
+        width: 100%;
+        /*min-width: 1000px;*/
+        height: 5rem;
+        /*background: rgba(246, 246, 246, 0.6);*/
+        background: #F6523A;
+        margin-bottom: 0;
+        /*z-index: 100;*/
+    }
+
+    .footCenter {
+        width: 98%;
+        height: 4.5rem;
+        /*position: absolute;*/
+        /*left: 1%;*/
+        /*bottom: 0;*/
+        /*background:#F6523A;*/
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+    }
+    .footCenter p{
+        width: 18%;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        /*background: yellow;*/
+        color: white;
+        font-size: 0.6rem;
+        margin-left: 1.5%;
+    }
+    .footCenter p:hover{
+        cursor: pointer;
+        transition: 1.0s !important;
+        transform: scale(1.3) !important;
+    }
+    .footCenter p a{
+        color: white;
+    }
+    .footCenter p i{
+        font-size: 0.6rem; color: white;
+    }
+    .footCenter .pLong{
+        width: 35%;
+    }
+
+    .shadeMask2{
+        width: 97%;
+        /*margin-top: 8px;*/
+        /*background: yellow;*/
+        margin: 10px auto;
+        /*display: none;*/
+    }
+    /*.shadeMask1{*/
+    /*    */
+    /*}*/
+    .strB{
+        width: 100%;
+        font-size: 15px;
+        font-weight: 800;
+    }
+    .strSmall{
+        width: 100%;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: justify;
+        -moz-text-align-last: right;
+    }
+
+    /*媒体查询*/
+    @media (max-width: 900px){
+        .foot{
+            height: 20vh;
+        }
+        .footCenter {
+            height:19vh;
+            display: flex;
+            flex-wrap:wrap;
+            /*flex-direction: column;*/
+        }
+
+        .footCenter p {
+            width: 48%;
+            line-height: 1.8rem;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .footCenter .pLong{
+            width: 100%;
+        }
+    }
+
+</style>
+<div class="foot">
+    <div class="footCenter">
+        <p>@2021 Polynk. 所有权利</p>
+        <p><a href="http://www.beian.gov.cn/portal/index.do"> 苏ICP备2020052832号</a></p>
+        <p class="cookie" style="cursor: pointer">隐私政策</p>
+        <p>法律说明</p>
+        <p>
+            <i class="layui-icon layui-icon-cellphone">手机:</i>
+            <a href="tel:18851200191">18851200191</a>
+        </p>
+        <p>
+            <i class="layui-icon layui-icon-dialogue">邮箱:</i>
+            gfy@polynk.com
+        </p>
+        <p class="pLong">
+            <i class="layui-icon layui-icon-location">地址:</i>
+            江苏省常州市溧阳市昆仑街道上上路85号504室
+        </p>
+    </div>
+</div>
