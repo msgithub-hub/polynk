@@ -40,6 +40,7 @@
 .detailText{
     /*text-indent:2em;*/
     width: 1000px;
+    /*background: #0000FF;*/
     margin: 8px auto;
     line-height: 2rem;
     text-align: justify;
@@ -49,10 +50,10 @@
     letter-spacing: 2px;
     padding-bottom: 20px;
 }
-.detailImg{
-    width: 1000px;
-    height: auto;
-    margin: 20px auto;
+.detailText img{
+    width:100% !important;
+    height: auto !important;
+    /*margin-left: 100px !important;*/
 }
 
 
@@ -89,9 +90,14 @@
     .detailText{
         /*text-indent:2em;*/
         width: 100%;
-        height: auto;
+        /*height: auto;*/
         font-size: 1rem;
         letter-spacing: 2px;
+    }
+    .detailText img{
+        width: 100% !important;
+        /*height: auto !important;*/
+        /*margin: 0 auto !important;*/
     }
     .detailImg{
         width: 100%;

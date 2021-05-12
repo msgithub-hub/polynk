@@ -5,31 +5,32 @@
 }
 .listData .box{
     width: 96%;
-    height: 1.5rem;
+    /*height: 1.5rem;*/
     margin: 15px auto;
+    padding: 15px 8px;
     /*background: #00F7DE;*/
     display: flex;
+    border-bottom: 1px solid #dddddd;
 }
 .box:hover{
     cursor: pointer;
-    transition: 1.0s !important;
+    /*transition: 1.0s !important;*/
     transform: scale(1.1) !important;
     color: #F6523A;
     font-weight: 600;
 }
 .titlename{
-    width: 70%;
-    font-size: 0.6rem;
-    /*background: blue;*/
-    text-align: left;
-    line-height: 1.5rem;
+    width: 200px;
+    height: 180px;
+    border: 1px solid #dddddd;
+    object-fit: cover;
 }
 .time{
-    width: 25%;
+    width: 700px;
     font-size: 0.6rem;
     /*background: blue;*/
     text-align: right;
-    line-height: 1.5rem;
+    line-height: 180px;
     margin-left: 5%;
 }
 #page{
@@ -37,7 +38,7 @@
     margin: 20px auto;
 }
 .layui-laypage .layui-laypage-curr .layui-laypage-em{
-    background: orangered !important;
+    /*background: orangered !important;*/
 }
 
 
@@ -45,25 +46,37 @@
 @media (max-width: 900px) {
     .content1{
         width: 90%;
-        padding-bottom: 5rem;
+        /*padding-bottom: 7rem;*/
     }
     .listData{
         width: 100%;
         padding-bottom: 0px;
         /*background: #F6523A;*/
     }
-    .titlename,.time{
+    .titlename{
+        width: 35%;
+        height: 30vw;
+        object-fit: cover;
+    }
+    .time{
+        width: 60%;
+        height: 30vw;
+        text-align: right;
+        line-height: 15vw;
+        margin-left: 5%;
         font-size: 0.8rem;
+        overflow-y: auto;
     }
     #page{
         width: 100%;
         margin: 20px auto;
+        text-align: center;
     }
     .layui-laypage {
         text-align: center !important;
     }
     .wenzi_bottom{
-        position: fixed;bottom:0;z-index: 100;
+        /*position: fixed;bottom:0;z-index: 100;*/
     }
 
 }

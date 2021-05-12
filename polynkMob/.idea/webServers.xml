@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ff05d8f7-ea01-41e6-ab67-71fcae4e07e8" name="小程序" url="http://45.40.204.33">
+        <fileTransfer host="45.40.204.33" port="22" rootFolder="/usr/local/polynk/dist/polynkMob" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

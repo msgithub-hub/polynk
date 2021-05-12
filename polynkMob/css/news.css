@@ -5,14 +5,16 @@
 }
 .listData .box{
     width: 96%;
-    height: 1.5rem;
-    margin: 15px auto;
+    height: 4rem;
+    margin: 0px auto;
+    /*padding: 40px 0px;*/
     /*background: #00F7DE;*/
     display: flex;
+    border-bottom: 1px solid #dddddd;
 }
  .box:hover{
     cursor: pointer;
-    transition: 1.0s !important;
+    /*transition: 1.0s !important;*/
     transform: scale(1.1) !important;
     color: #F6523A;
      font-weight: 600;
@@ -22,14 +24,14 @@
     font-size: 0.6rem;
     /*background: blue;*/
     text-align: left;
-    line-height: 1.5rem;
+    line-height: 4rem;
 }
 .time{
     width: 25%;
     font-size: 0.6rem;
     /*background: blue;*/
     text-align: right;
-    line-height: 1.5rem;
+    line-height: 4rem;
     margin-left: 5%;
 }
 #page{
@@ -37,7 +39,7 @@
     margin: 20px auto;
 }
 .layui-laypage .layui-laypage-curr .layui-laypage-em{
-    background: orangered !important;
+    /*background: orangered !important;*/
 }
 
 
@@ -45,7 +47,8 @@
 @media (max-width: 900px) {
     .content1{
         width: 90%;
-        padding-bottom: 5rem;
+        /*padding-bottom: 38vw;*/
+        margin: 0 auto;
     }
     .listData{
         width: 100%;
@@ -58,12 +61,21 @@
     #page{
         width: 100%;
         margin: 20px auto;
+        text-align: center;
     }
     .layui-laypage {
         text-align: center !important;
     }
     .wenzi_bottom{
-        position: fixed;bottom:0;z-index: 100;
+        /*position: fixed;bottom:0;z-index: 100;*/
+    }
+
+    .listData .box{
+        height: 12vh;
+    }
+    .titlename,.time{
+        font-size: 0.8rem;
+        line-height: 12vh;
     }
 
 }

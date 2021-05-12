@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>新闻详情</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
-    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
@@ -52,46 +52,39 @@
             });
             $.ajax({
                 type: 'get',
-                url: 'json/list.json',
+                url: 'https://www.polynk.cn/server/news/all',
                 dataType: 'json',
                 data: {
-                    // "id":  idAll,
+                    "id":  idAll,
                 },
                 success: function (res) {
                     layer.close(loadIndex);
-                    let dataList = res.arr1;
-                    // console.log(dataList);
-                    $.each(dataList, function (idx, val) {
-                        if (idAll == val.id) {
-                            if(val.pic==''){
-                                $('.content_body').append(`<div class="content1">
-                                           <div class="detailtitle animated slideInLeft  textShadow">${val.textTitleCN}</div>
-                                           <p class="detailTime animated slideInRight  textShadow">${val.time}</p>
-                                           <p class="detailText animated slideInLeft  textShadow">${val.textJS}</p>
+                    let dataList = res.data;
+                    if(res.code===200){
+                        $.each(dataList, function (idx, val) {
+                            if (idAll == val.id) {
+                                    let el = `<div class="content1">
+                                           <div class="detailtitle animated slideInLeft  textShadow">${val.title}</div>
+                                           <p class="detailTime animated slideInRight  textShadow">${val.createTime}</p>
+                                           <div class="detailText animated slideInLeft  textShadow">${val.content}</div>
 
-                                      </div>`)
-                            }else{
-                                let el = `<div class="content1">
-                                           <div class="detailtitle animated slideInLeft  textShadow">${val.textTitleCN}</div>
-                                           <p class="detailTime animated slideInRight  textShadow">${val.time}</p>
-                                           <p class="detailText animated slideInLeft  textShadow">${val.textJS}</p>
-                                           <div class="photo_rongqi"><img src="image/loading.gif" lay-src="${val.pic}" class="detailImg animated slideInRight boxShadow"></div>
                                       </div>`;
-                                $('.content_body').append(el)
+                            // <div class="photo_rongqi"><img src="image/loading.gif" lay-src="${val.pic}" class="detailImg animated slideInRight boxShadow"></div>
+                                    $('.content_body').append(el)
                             }
-
-                        }
-                    });
-
-                    // 图片预览
-                    $('.detailImg').on('click',function () {
-                        console.log('2222photo');
-                        layer.photos({
-                            photos: '.photo_rongqi',
-                            anim: 4 //0-6的选择，指定弹出图片动画类型，默认随机
                         });
 
-                    });
+                        // 图片预览
+                        $('.detailText').on('click','img',function () {
+                            // console.log('2222photo');
+                            layer.photos({
+                                photos: '.detailText',
+                                anim: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+                            });
+
+                        });
+                    }
+
                 },
                 error: function (xhr, type) {
                     layui.use('layer', function () {

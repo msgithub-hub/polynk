@@ -165,10 +165,10 @@
 
     }
     .friendlogo{
-        width: 1.6rem;
-        height: 1.3rem;
+        width: 13vw;
+        height: 10vw;
         object-fit: fill;
-        margin-left: 1.2%;
+        margin-left: 1.5%;
         margin-top: 6%;
         /*opacity: 0.5;*/
     }

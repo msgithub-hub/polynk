@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>联系我们</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
-    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="layui/css/layui.css">
@@ -42,18 +42,18 @@
 <script src="js/rem.js"></script>
 <script src="layui/layui.js"></script>
 <script src="js/loadHF.js"></script>
-<script type="text/javascript" src="http://map.qq.com/api/js?key=DXGBZ-EHOWG-GUSQ3-IK74G-S52QT-Y2FGG"></script>
+<script type="text/javascript" src="https://map.qq.com/api/js?key=DXGBZ-EHOWG-GUSQ3-IK74G-S52QT-Y2FGG"></script>
 <script>
     layui.use(['layer', 'jquery','laydate'], () => {
         let layer = layui.layer;
         let laydate = layui.laydate;
         let $=layui.jquery;
-        // layer.ready(function() {
-        //     loadIndex = layer.load(1,{
-        //         time:2 * 1000,
-        //         shade: [1,'#ddd']
-        //     });
-        // });
+        layer.ready(function() {
+            loadIndex = layer.load(1,{
+                time:3 * 1000,
+                shade: [1,'#ddd']
+            });
+        });
         var citylocation, map, marker = null;
 
         //给外层的a标签加上url，方便一会点击小地图的时候直接跳转。
@@ -100,13 +100,9 @@
             calendar: true,//提示当月有哪些国际节日，英文版的没有
             // showBottom: false, //是否关闭底部按钮
             btns: ['now'],
-            // mark: {
-            //     '0-4-1': '愚人节',
-            //     '0-4-22': '啥都不是'
-            //     ,'0-12-13': '国殇'
-            //     ,'0-0-25': '工资'
-            //     ,
-            // },
+            mark: {
+                '0-0-25': '￥',
+            },
             change: function(value, date,){
                 layer.msg(`${date.month}月${date.date}号`);
             },

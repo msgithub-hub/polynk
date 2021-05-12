@@ -2,24 +2,26 @@
 <style>
     /*脚部*/
     .foot {
-        /*position: fixed;*/
-        /*bottom: 0px;*/
         width: 100%;
-        /*min-width: 1000px;*/
-        height: 5rem;
-        /*background: rgba(246, 246, 246, 0.6);*/
-        background: #F6523A;
-        margin-bottom: 0;
-        /*z-index: 100;*/
+        height: 6.5rem;
+        /*background: green;*/
     }
 
+    .footTop{
+        width: 100%;
+        background: rgba(0,0,0,0.5);
+        font-size: 0.6rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 1px;
+    }
     .footCenter {
-        width: 98%;
-        height: 4.5rem;
-        /*position: absolute;*/
-        /*left: 1%;*/
-        /*bottom: 0;*/
-        /*background:#F6523A;*/
+        width: 100%;
+        height: 5rem;
+        background: linear-gradient(to bottom,#F6523A,goldenrod);
         display: flex;
         flex-wrap:wrap;
         align-items: center;
@@ -75,10 +77,16 @@
     /*媒体查询*/
     @media (max-width: 900px){
         .foot{
-            height: 20vh;
+            height: 7.5rem;
+        }
+        .footTop{
+            width: 100%;
+            font-size: 0.9rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
         }
         .footCenter {
-            height:19vh;
+            height:6rem;
             display: flex;
             flex-wrap:wrap;
             /*flex-direction: column;*/
@@ -86,7 +94,7 @@
 
         .footCenter p {
             width: 48%;
-            line-height: 1.8rem;
+            line-height: 1.3rem;
             text-align: center;
             font-size: 0.8rem;
         }
@@ -97,6 +105,7 @@
 
 </style>
 <div class="foot">
+    <div class="footTop">技术支持:【塑连网络科技江苏有限公司】</div>
     <div class="footCenter">
         <p>@2021 Polynk. 所有权利</p>
         <p><a href="http://www.beian.gov.cn/portal/index.do"> 苏ICP备2020052832号</a></p>

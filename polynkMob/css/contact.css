@@ -67,8 +67,15 @@
 
 /*媒体查询*/
 @media (max-width: 900px) {
+    .wenzi_bottom{
+        /*height: 6.5rem;*/
+        position: fixed;
+        bottom: 0 ;
+        z-index: 100;
+    }
    .content1{
         width: 80%;
+       /*padding-bottom: 3vh;*/
     }
     .mapDate{
         width: 100%;
@@ -84,9 +91,8 @@
     }
     .date{
         width:100%;
-        /*height: 500px;*/
-        margin-left: 0px;
-        margin-top: 20px;
+        margin-left: 0;
+        margin-top: 35px;
     }
     #test2 #layui-laydate1{
         width: 100%;
@@ -101,7 +107,7 @@
     }
     .contactMan{
         width: 100%;
-        padding-bottom: 22vh;
+        padding-bottom: 37vh;
     }
     .contactMan p{
         font-size: 1rem;
@@ -114,9 +120,7 @@
     .contactMan p i{
         font-size: 1rem;
     }
-    .wenzi_bottom{
-        position: fixed;bottom:0;z-index: 100;
-    }
+
     .laydate-set-ym span{
         font-size: 1rem;
     }
