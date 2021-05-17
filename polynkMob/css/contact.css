@@ -69,9 +69,10 @@
 @media (max-width: 900px) {
     .wenzi_bottom{
         /*height: 6.5rem;*/
-        position: fixed;
-        bottom: 0 ;
-        z-index: 100;
+
+        /*position: fixed;*/
+        /*bottom: 0 ;*/
+        /*z-index: 100;*/
     }
    .content1{
         width: 80%;
@@ -107,7 +108,7 @@
     }
     .contactMan{
         width: 100%;
-        padding-bottom: 37vh;
+        /*padding-bottom: 37vh;*/
     }
     .contactMan p{
         font-size: 1rem;

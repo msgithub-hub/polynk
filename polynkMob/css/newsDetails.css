@@ -49,6 +49,12 @@
     letter-spacing: 2px;
     padding-bottom: 20px;
 }
+
+.detailText p strong img, .detailText p img, .detailText img,.detailText strong img {
+    width: 60% !important;
+    height: auto !important;
+    margin-left: 20% !important;
+}
 .detailImg{
     width: 1000px;
     height: auto;
@@ -100,5 +106,10 @@
     }
     .wenzi_bottom{
         position: fixed;bottom:0;z-index: 100;
+    }
+    .detailText p strong img, .detailText p img, .detailText img,.detailText strong img {
+        width: 100% !important;
+        height: auto !important;
+        margin-left:0 !important;
     }
 }

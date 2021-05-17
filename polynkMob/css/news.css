@@ -41,6 +41,9 @@
 .layui-laypage .layui-laypage-curr .layui-laypage-em{
     /*background: orangered !important;*/
 }
+.layui-laypage {
+    text-align: center !important;
+}
 
 
 
