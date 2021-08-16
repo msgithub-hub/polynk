@@ -9,6 +9,12 @@ layui.use( 'jquery', () => {
         });
         let index = window.location.hash.substring(1);
         $('.content-nav>.navUl>.li_son1').eq(index).addClass("li_none").siblings(".navUl .li_son1").removeClass("li_none");
+
+        // $('.content-nav .navUl .li_son1').each(function(){
+        //     if($($(this))[0].window.open()==String(window.location))
+        //         $(this).addClass('li_none').siblings('.li_none').removeClass('li_none');
+        // });
+
         $('.head-top .logo').on('click',function () {
             // $(this).addClass('flip');
             setTimeout(function () {
