@@ -5,7 +5,10 @@
     <title>塑连科技</title>
     <!--设置IE渲染方式默认为最高( 让它永远按最新的文档模型渲染）-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="塑连网络科技,互联网公司，新媒体,公司成立于2019年，注册资本1000万元,互联网信息技术服务，微信小程序——全球挤出工程师认证系统">
+    <meta name="Description" content="塑连网同时注重新媒体平台的发展，搭建了以服务号、公众号、抖音号为主体的新媒体传播矩阵。目前，塑连网的新媒体矩阵已经成型，并且形成了对行业热点反应迅速，宣传手段多样化，内容制作标准化，推广目标精准化的独特优势，在行业内积累了一定的影响力。">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+
     <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
@@ -25,20 +28,23 @@
     <!--轮播图-->
     <div class="content1 layui-carousel animated slideInLeft yc" id="test1">
         <div carousel-item>
-            <div><img src="image/ban1.png" class="ban"></div>
-            <div><img src="image/Extruder1.jpg" class="ban"  onclick="javascript:window.open('applets.html#2','_self')"></div>
-            <div><img src="image/ban2.png" class="ban"></div>
-            <div><img src="image/Extruder2.jpg" class="ban"  onclick="javascript:window.open('applets.html#2','_self')"></div>
-            <div><img src="image/5.jpg" class="ban"></div>
+            <div>
+                <img src="image/banner.png" class="ban" onclick="javascript:window.open('aboutUs.html#1','_self')">
+            </div>
+            <div>
+                <img src="image/banner1.png" class="ban" onclick="javascript:window.open('aboutUs.html#1','_self')">
+            </div>
+            <div>
+                <img src="image/banner2.png" class="ban" onclick="javascript:window.open('aboutUs.html#1','_self')">
+            </div>
+            <!--<div><img src="image/banner3.png" class="ban" onclick="javascript:window.open('aboutUs.html#1','_self')">-->
+            <!--</div>-->
+            <div>
+                <img src="image/banner4.png" class="ban" onclick="javascript:window.open('aboutUs.html#1','_self')">
+            </div>
         </div>
     </div>
 
-    <!--我们的理念-->
-    <img src="image/title1.png" class="title1 animated slideInRight yc huxi">
-    <div class="content2 thinkContent animated slideInLeft yc">
-        <img src="image/moveImg1.png" class="moveImg1">
-        <img src="image/moveImg2.png" class="moveImg2">
-    </div>
 
     <!--我们的团队-->
     <div class="content4">
@@ -55,7 +61,12 @@
 
     </div>
 
-
+    <!--我们的理念-->
+    <img src="image/title1.png" class="title1 animated slideInRight yc huxi">
+    <div class="content2 thinkContent animated slideInLeft yc" title="我们的理念">
+        <img src="image/moveImg1.png" class="moveImg1">
+        <img src="image/moveImg2.png" class="moveImg2">
+    </div>
 
     <!--我们的合作伙伴-->
     <img src="image/title2.png" class="title1 animated slideInRight yc huxi">
@@ -68,7 +79,7 @@
 
 <div class="foot wenzi_bottom" id="wenzi_bottom"></div>
 
-
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script src="js/rem.js"></script>
 <script src="layui/layui.js"></script>
 <script src="js/loadHF.js"></script>
@@ -90,7 +101,7 @@
         carousel.render({
             elem: '#test1'
             , width: '100%' //设置容器宽度
-            , height: '18rem'
+            , height: '14rem'
             , arrow: 'hover' //始终显示箭头
             , interval: '2000' //切换动画方式
             , anim: 'default'
@@ -118,7 +129,7 @@
                 layer.open({
                     type: 1,
                     title: false,
-                    shade: [1, '#000'],
+                    shade: [1.0, '#000'],
                     area: ['94vw', '70vh'],
                     content: loadstr,
                 });

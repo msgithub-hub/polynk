@@ -54,6 +54,8 @@
     width: 60% !important;
     height: auto !important;
     margin-left: 20% !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
 }
 .detailImg{
     width: 1000px;
@@ -79,7 +81,7 @@
     }
     .content1{
         width: 90%;
-        padding-bottom: 20vh;
+        /*padding-bottom: 20vh;*/
     }
     .detailtitle{
         width: 100%;
@@ -105,7 +107,7 @@
         margin: 20px auto;
     }
     .wenzi_bottom{
-        position: fixed;bottom:0;z-index: 100;
+        /*position: fixed;bottom:0;z-index: 100;*/
     }
     .detailText p strong img, .detailText p img, .detailText img,.detailText strong img {
         width: 100% !important;

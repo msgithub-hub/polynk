@@ -37,6 +37,9 @@
     width: 70%;
     margin: 20px auto;
 }
+#page .layui-laypage a, .layui-laypage span,.layui-laypage-skip input,.layui-laypage-skip button{
+    background-color:transparent !important;
+}
 .layui-laypage .layui-laypage-curr .layui-laypage-em{
     /*background: orangered !important;*/
 }

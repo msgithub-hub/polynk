@@ -11,14 +11,19 @@
     list-style: none;
     box-sizing: border-box;
     font-family: glowblack;
+
 }
 html, body {
     width: 100%;
     min-height: 100vh;
-    background: url("../image/bg.jpg")no-repeat center center;
-    background-size: 100% 100%;
+    /*background: linear-gradient(to bottom,#EBEBE4,#EBEBE4);*/
+    /*background: black;*/
+    /*background: url("../image/bg.jpg")no-repeat center center;*/
+    /*background-size: 100% 100%;*/
     /*margin-bottom: 4.6rem;*/
     /*min-width: 1200px;*/
+
+    /*#E3EDCD*/
 
 }
 body {
@@ -104,11 +109,11 @@ p{
 }
 
 .boxShadow{
-    box-shadow: 6px 6px 6px 6px #666666;
+    box-shadow: 6px 6px 6px 6px #666;
 }
 .textShadow{
-    color: black !important;
-   text-shadow: 6px 8px 8px #666666;
+    color: #666 !important;
+   /*text-shadow: 6px 8px 8px #666666;*/
 }
 
 /*呼吸灯*/
@@ -160,6 +165,22 @@ p{
         width: 100%;
         padding-top: 4.7rem;
         -webkit-overflow-scrolling: touch;
+    }
+    html, body {
+        width: 100%;
+        min-height: 100vh;
+        /*background: linear-gradient(to bottom,#FAF9DE,#FAF9DE);*/
+        background: url("../image/bg.jpg")no-repeat center center;
+        background-size: 100% 100%;
+        /*margin-bottom: 4.6rem;*/
+        /*min-width: 1200px;*/
+
+        /*#E3EDCD*/
+
+    }
+    .textShadow{
+        color: black !important;
+        text-shadow: 6px 8px 8px #666666;
     }
 
 }

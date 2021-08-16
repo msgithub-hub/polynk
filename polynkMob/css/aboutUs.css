@@ -7,6 +7,7 @@
     /*color:#7e8387 ;*/
     color: white;
 }
+
 .textWord{
     text-align: justify;
     color: white;
@@ -15,11 +16,12 @@
     font-size: 0.6rem;
     margin-top: 10px;
 }
-.textImg{
+
+.textImg {
     width: 100%;
     height: auto;
     margin: 10px auto;
-
+    /*margin-left: 20%;*/
 }
 /*妍云之家介绍*/
 .yycontent{
@@ -84,6 +86,7 @@
     .yycontent{
         width: 90%;
     }
+
     .textImg1{
         width: 100%;
         height: auto;
@@ -93,6 +96,7 @@
         padding-top: 20px;
         font-size: 0.3rem;
         line-height: 20px;
+        color: #F6523A;
     }
     .yyma{
         width: 100%;

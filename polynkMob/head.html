@@ -26,18 +26,24 @@
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
     }
-.logoYellow{
-    display: none;
-}
+
+    .logoYellow {
+        display: none;
+    }
+
     .menu {
         display: none;
         width: 3rem;
         height: 3rem;
         /*margin-left: 20%;*/
     }
+    /*.TDiv{*/
+        /*width: 25%;*/
+        /*background: #1E9FFF;*/
+    /*}*/
 
     .logoWord {
-        width: 25%;
+        width: 100%;
         text-align: right;
         line-height: 3rem;
         color: #F6523A;
@@ -48,7 +54,7 @@
     .content-nav {
         width: 100%;
         /*background: #F6523A;*/
-        background: linear-gradient(to right,#F6523A,goldenrod);
+        background: linear-gradient(to right, #F6523A, goldenrod);
         /*background: rgba(0,0,0,0.7);*/
     }
 
@@ -57,7 +63,7 @@
         /*background: #1E9FFF;*/
         margin: 0 auto;
         /*background-color: #F6523A !important;*/
-        background: linear-gradient(to right,#F6523A,goldenrod);
+        background: linear-gradient(to right, #F6523A, goldenrod);
         display: flex;
         justify-content: center;
     }
@@ -73,26 +79,30 @@
         font-size: 0.6rem;
         letter-spacing: 2px;
     }
-    .toubu .navUl li:hover{
-       cursor: pointer;
+
+    .toubu .navUl li:hover {
+        cursor: pointer;
     }
-    .navUl .li_none{
-        width:100%;
+
+    .navUl .li_none {
+        width: 100%;
         margin-left: 0%;
         color: white !important;
         /*border-bottom: 3px solid white;*/
-        background: rgba(255,255,255,0.5);
+        background: rgba(255, 255, 255, 0.5);
 
     }
 
     /*媒体查询*/
     @media (max-width: 900px) {
-        .logoRed{
+        .logoRed {
             display: none;
         }
-        .logoYellow{
+
+        .logoYellow {
             display: block;
         }
+
         .toubu {
             width: 100%;
             position: fixed;
@@ -101,10 +111,11 @@
             /*min-width: 1200px;*/
             /*background-color: #F6523A;*/
         }
+
         .head-top {
             width: 100%;
             /*background: rgba(246,82,56,1);*/
-            background: linear-gradient(to right,#F6523A,goldenrod);
+            background: linear-gradient(to right, #F6523A, goldenrod);
             padding: 0.5rem 0;
             display: flex;
             justify-content: space-around;;
@@ -114,18 +125,23 @@
         .content-nav {
             width: 100%;
             /*background: #F6523A;*/
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
         }
+
         .menu {
             display: block;
             width: 2rem;
             height: 2rem;
-            margin-left: 23%;
+            margin-left: 20%;
         }
-        /*.logo{*/
-            /*box-shadow:  6px 6px 6px 6px #666;*/
-        /*}*/
 
+        /*.logo{*/
+        /*box-shadow:  6px 6px 6px 6px #666;*/
+        /*}*/
+        /*.TDiv{*/
+            /*width: 25%;*/
+            /*background: #1E9FFF;*/
+        /*}*/
         .logoWord {
             width: 40%;
             color: white;
@@ -137,8 +153,8 @@
         .toubu .navUl {
             display: none;
             width: 100%;
-            padding:0 0px;
-            background: rgba(0,0,0,0.0) !important;
+            padding: 0 0px;
+            background: rgba(0, 0, 0, 0.0) !important;
             position: relative;
             z-index: 100;
         }
@@ -153,9 +169,10 @@
             color: white;
             /*font-weight: 600;*/
         }
-        .navUl .li_none{
+
+        .navUl .li_none {
             color: #F6523A !important;
-            background: rgba(255,255,255,0.8);
+            background: rgba(255, 255, 255, 0.8);
         }
 
     }
@@ -164,56 +181,55 @@
 <div class="toubu">
     <div class="head-top">
         <img src="image/logo.png" class="logo logoRed animated rubberBand" style="animation-iteration-count: infinite;">
-        <img src="image/logoChange.png" class="logo logoYellow animated flip" style="animation-iteration-count: infinite;">
+        <img src="image/logoChange.png" class="logo logoYellow animated flip"
+             style="animation-iteration-count: infinite;">
         <img src="image/menu.png" class="menu wave">
+        <!--<div class="TDiv">-->
         <p class="logoWord huxi1">welcome to Polynk!</p>
+        <!--</div>-->
     </div>
     <div class="content-nav">
         <ul class="navUl">
             <li class="li_son1 li_none" onclick="javascript:window.open('index.html#0','_self')">
                 网站首页
             </li>
-            <li class="li_son1"  onclick="javascript:window.open('aboutUs.html#1','_self')">
+            <li class="li_son1" onclick="javascript:window.open('aboutUs.html#1','_self')">
                 关于我们
             </li>
-            <li class="li_son1"  onclick="javascript:window.open('applets.html#2','_self')">
+            <li class="li_son1" onclick="javascript:window.open('applets.html#2','_self')">
                 挤出工程师
             </li>
-            <li class="li_son1"  onclick="javascript:window.open('ecosphere.html#3','_self')" >
+            <li class="li_son1" onclick="javascript:window.open('ecosphere.html#3','_self')">
                 生态圈
             </li>
-            <li class="li_son1"  onclick="javascript:window.open('news.html#4','_self')">
+            <li class="li_son1" onclick="javascript:window.open('news.html#4','_self')">
                 新闻中心
             </li>
-            <li class="li_son1"  onclick="javascript:window.open('contact.html#5','_self')">
+            <li class="li_son1" onclick="javascript:window.open('contact.html#5','_self')">
                 联系我们
             </li>
         </ul>
 
 
-
-
-
-
         <!--<ul class="layui-nav layui-bg-green  navUl" lay-shrink="all" lay-filter="">-->
-            <!--<li class="layui-nav-item layui-this zhankai">-->
-                <!--<a href="index.html">1首页</a>-->
-            <!--</li>-->
-            <!--<li class="layui-nav-item">-->
-                <!--<a href="aboutUs.html">关于我们</a>-->
-            <!--</li>-->
-            <!--<li class="layui-nav-item ">-->
-                <!--<a href="javascript:void(0)">全球挤出工程师认证</a>-->
-            <!--</li>-->
-            <!--<li class="layui-nav-item">-->
-                <!--<a href="javascript:void(0)">生态圈</a>-->
-            <!--</li>-->
-            <!--<li class="layui-nav-item zhankai">-->
-                <!--<a href="javascript:void(0)">新闻</a>-->
-            <!--</li>-->
-            <!--<li class="layui-nav-item">-->
-                <!--<a href="">联系我们</a>-->
-            <!--</li>-->
+        <!--<li class="layui-nav-item layui-this zhankai">-->
+        <!--<a href="index.html">1首页</a>-->
+        <!--</li>-->
+        <!--<li class="layui-nav-item">-->
+        <!--<a href="aboutUs.html">关于我们</a>-->
+        <!--</li>-->
+        <!--<li class="layui-nav-item ">-->
+        <!--<a href="javascript:void(0)">全球挤出工程师认证</a>-->
+        <!--</li>-->
+        <!--<li class="layui-nav-item">-->
+        <!--<a href="javascript:void(0)">生态圈</a>-->
+        <!--</li>-->
+        <!--<li class="layui-nav-item zhankai">-->
+        <!--<a href="javascript:void(0)">新闻</a>-->
+        <!--</li>-->
+        <!--<li class="layui-nav-item">-->
+        <!--<a href="">联系我们</a>-->
+        <!--</li>-->
         <!--</ul>-->
     </div>
 </div>

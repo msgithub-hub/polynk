@@ -36,6 +36,10 @@
         font-size: 0.6rem;
         margin-left: 1.5%;
     }
+    .footCenter .twoP{
+        width: 20%;
+        /*background: #00FF00;*/
+    }
     .footCenter p:hover{
         cursor: pointer;
         transition: 1.0s !important;
@@ -77,16 +81,18 @@
     /*媒体查询*/
     @media (max-width: 900px){
         .foot{
-            height: 7.5rem;
+            height: 9rem;
+
         }
         .footTop{
             width: 100%;
-            font-size: 0.9rem;
+            font-size: 0.5rem;
             height: 1.5rem;
             line-height: 1.5rem;
         }
         .footCenter {
-            height:6rem;
+            height:7.5rem;
+            overflow: auto;
             display: flex;
             flex-wrap:wrap;
             /*flex-direction: column;*/
@@ -97,6 +103,10 @@
             line-height: 1.3rem;
             text-align: center;
             font-size: 0.8rem;
+        }
+        .footCenter .youxiang,
+        .footCenter .twoP{
+            width: 100%;
         }
         .footCenter .pLong{
             width: 100%;
@@ -115,13 +125,22 @@
             <i class="layui-icon layui-icon-cellphone">手机:</i>
             <a href="tel:18851200191">18851200191</a>
         </p>
-        <p>
+        <p class="">
             <i class="layui-icon layui-icon-dialogue">邮箱:</i>
             gfy@polynk.com
         </p>
+
         <p class="pLong">
             <i class="layui-icon layui-icon-location">地址:</i>
             江苏省常州市溧阳市昆仑街道上上路85号504室
+        </p>
+
+        <p class="twoP">
+            <!--<a href="http://www.beian.gov.cn/portal/index.do">-->
+            <img src="image/police.png" class="police">
+            <b>苏公网安备 32048102000451号</b>
+
+            <!--</a>-->
         </p>
     </div>
 </div>
